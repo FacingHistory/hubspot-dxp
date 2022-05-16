@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  @include body-copy;
+  background-color: clr(background);
+  color: clr(text);
+}
+
+a {
+  color: $text;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.main {
+  display: block; /* Fix for IE weirdness */
+}
+
+.container {
+  max-width: calc(#{$max-width} + #{$space * 4});
+  margin: 0 auto;
+  padding: 0 #{$space * 2};
+
+  @media screen and (max-width: $medium) {
+    max-width: calc(#{$max-width} + #{$space * 2});
+    padding: 0 $space;
+  }
+}
+
+.container--narrow {
+  max-width: calc(780px + #{$space * 4});
+  margin: 0 auto;
+  padding: 0 #{$space * 2};
+
+  @media screen and (max-width: $medium) {
+    max-width: calc(#{$max-width} + #{$space * 2});
+    padding: 0 #{$space};
+  }
+}
+
+.container--body {
+  max-width: calc(990px + #{$space * 4});
+  margin: 0 auto;
+  padding: 0 #{$space * 2};
+
+  @media screen and (max-width: $medium) {
+    max-width: calc(#{$max-width} + #{$space * 2});
+    padding: 0 #{$space};
+  }
+}
+
+.container--large {
+  max-width: calc(1320px + #{$space * 4});
+  margin: 0 auto;
+  padding: 0 #{$space * 2};
+
+  @media screen and (max-width: $medium) {
+    max-width: calc(#{$max-width} + #{$space * 2});
+    padding: 0 #{$space};
+  }
+}
+
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal;
+}

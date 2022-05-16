@@ -1,0 +1,126 @@
+$workspace-navigation-mobile: 970px;
+
+.workspace-menu {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding-left: 0;
+
+  @media screen and (max-width: $workspace-navigation-mobile) {
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: $medium) {
+    max-width: 100%;
+  }
+}
+
+.workspace-menu__link {
+  background-image: linear-gradient($blue, $blue);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1.5px;
+  display: inline;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.15px;
+  padding-left: 0;
+  text-decoration: none;
+  transition: background-size 0.3s, background-position 0.3s;
+
+  &:hover,
+  &:focus {
+    background-position: 0 100%;
+    background-size: 100% 1.5px;
+  }
+
+  &:before {
+    display: none;
+  }
+
+  @media screen and (max-width: $workspace-navigation-mobile) {
+    font-size: 17px;
+  }
+}
+
+.workspace-menu__link--active {
+  background-size: 100% 1.5px;
+
+  .workspace-nav--sub {
+    background-color: transparent;
+    box-shadow: none;
+    columns: auto;
+    opacity: 1;
+    pointer-events: auto;
+    position: static;
+    transform: none;
+    visibility: visible;
+    width: auto;
+  }
+}
+
+.workspace-menu__link--sub {
+  font-family: $font-secondary;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.workspace-menu--sub {
+  padding-top: 16px;
+  padding-left: 16px;
+  display: none;
+
+  .workspace-menu__item--active &,
+  .workspace-menu__item--child-active & {
+    display: block;
+
+    @media screen and (max-width: $workspace-navigation-mobile) {
+      display: none;
+    }
+  }
+
+  .main-menu--open & {
+    @media screen and (max-width: $workspace-navigation-mobile) {
+      display: block;
+    }
+  }
+}
+
+.workspace-menu__primary-item {
+  display: block;
+}
+
+.workspace-menu__item-wrapper {
+  @media screen and (max-width: $workspace-navigation-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.workspace-nav--sub {
+  padding: 15px 15px 0 15px;
+
+  @media screen and (max-width: $workspace-navigation-mobile) {
+    display: none;
+  }
+}
+
+.workspace-menu__item {
+  border-bottom: 0;
+  margin-right: 0;
+  padding-bottom: 30px;
+}
+
+.workspace-menu__item--sub {
+  padding-bottom: 14px;
+
+  @media screen and (max-width: $workspace-navigation-mobile) {
+    display: block;
+  }
+}
+
+.workspace-menu__item--sub-1 {
+  margin-bottom: 0;
+}

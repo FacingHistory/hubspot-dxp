@@ -1,0 +1,33 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Boilerplate - email subscription preferences
+  screenshotPath: ../../images/template-previews/subscription-preferences.png
+-->
+{% set template_css = "../../css/templates/system.css" %}
+{% extends "../layouts/base-dxp.html" %}
+{# pageTitle is used on system templates for setting a value for the title tag #}
+{% set pageTitle = "Subscription preferences" %}
+
+{% block body %}
+<section class="content-wrapper">
+  <div class="systems-page">
+    {% module "subscription_preferences"
+      path="@hubspot/email_subscriptions"
+    %}
+  </div>
+</section>
+
+{% require_js %}
+  <script>
+    /* Remove lists from the Subscription preferences page */
+
+    //  Learn+Teach+Share Subscription (LA)
+    $('.item').has('#id_631148').remove();
+
+    // Facing Canada Subscription
+    $('.item').has('#id_631166').remove()
+
+  </script>
+{% end_require_js %}
+{% endblock body %}

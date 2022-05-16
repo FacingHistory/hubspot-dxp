@@ -1,0 +1,51 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+
+// Fonts
+$font-primary: 'Gotham A', 'Gotham B', 'Helvetica', 'Arial', sans-serif;
+$font-secondary: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+
+$font-heading: $font-primary;
+$font-body: $font-secondary;
+
+// Z-index
+$z-modal: 10;
+$z-main-menu: 11;
+$z-sibling-navigation: 9;
+$z-institutional-nav: 4;
+$z-countries-dropdown: 4;
+$z-countries-dropdown-open: 5;
+$z-on-page-sticky: 8;
+
+// Spacing
+$space: 20px;
+
+// Times
+$space-double: $space * 2;
+$space-triple: $space * 3;
+$space-quadruple: $space * 4;
+$space-quintuple: $space * 5;
+$space-sextuple: $space * 6;
+$space-septuple: $space * 7;
+
+// Divided
+$space-one-half: $space/2;
+$space-one-third: $space/3;
+$space-one-fourth: $space/4;
+$space-one-fifth: $space/5;
+$space-one-sixth: $space/6;
+$space-one-seventh: $space/7;
+$space-one-eighth: $space/8;
+
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+@mixin space-stack-page {
+  margin-bottom: $space-double;
+}

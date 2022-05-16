@@ -1,0 +1,23 @@
+@mixin link {
+  background-image: linear-gradient($blue-light, $blue-light);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  color: $black;
+  display: inline;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2px;
+
+  &:hover,
+  &:focus {
+    background-size: 100% 100%;
+    background-position: 0 100%;
+  }
+}
+
+.link {
+  @include link;
+}

@@ -1,0 +1,17 @@
+.inline-menu {
+  @include list-reset;
+}
+
+.inline-menu__item {
+  @include large {
+    display: inline;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.inline-menu__link {
+  text-decoration: none;
+}

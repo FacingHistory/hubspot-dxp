@@ -1,0 +1,120 @@
+// Sass map to define colors
+$button-colors: (
+  primary: (
+    text: $black,
+    bg: $orange,
+    text-hover: $black,
+    bg-hover: lighten($orange, 2%),
+  ),
+  secondary: (
+    text: $black,
+    bg: $salmon,
+    text-hover: $black,
+    bg-hover: darken($salmon, 2.5%),
+  ),
+  tertiary: (
+    text: $black,
+    bg: $charteuse,
+    text-hover: $black,
+    bg-hover: darken($charteuse, 3%),
+  ),
+);
+
+// Mixin to define colors for one or more schemes.
+// Simply pass the color scheme to the mixin to get the colors defined in the map.
+// e.g. @include buttonColors(default) will get all of the colors defined in the "default" section.
+@mixin buttonColors(
+  $scheme,
+  $pallate: map-get($button-colors, $scheme),
+  $map: $button-colors
+) {
+  color: map-get($pallate, text);
+  background-color: map-get($pallate, bg);
+  transition: color 0.3s, background-color 0.3s;
+
+  &:visited {
+    color: map-get($pallate, text);
+  }
+
+  &:hover {
+    color: map-get($pallate, text-hover);
+    background-color: map-get($pallate, bg-hover);
+  }
+}
+
+// The button-base mixin contains styles that apply to all buttons
+// regardless of color or size.
+@mixin button-base {
+  border-radius: 26px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3333;
+  padding: 14px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+// Button variations
+@mixin button-primary {
+  @include buttonColors(primary);
+}
+
+@mixin button-secondary {
+  @include buttonColors(secondary);
+}
+
+@mixin button-tertiary {
+  @include buttonColors(tertiary);
+}
+
+// Button size variations
+@mixin button-medium {
+  line-height: 1.4;
+  padding: $space-one-half $space;
+}
+
+@mixin button-small {
+  font-size: 12px;
+  padding: 5px 16px 6px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+@mixin button-large {
+  border-radius: 30px;
+  padding: 20px 40px;
+
+  @media screen and (max-width: $small) {
+    padding: 14px 32px;
+  }
+}
+
+.button,
+.hs-button {
+  @include button-base;
+  @include button-primary;
+
+  &--alt {
+    @include button-base;
+    @include button-secondary;
+  }
+
+  &--tertiary {
+    @include button-base;
+    @include button-tertiary;
+  }
+
+  &--small {
+    @include button-base;
+    @include button-small;
+  }
+
+  &--large {
+    @include button-base;
+    @include button-large;
+  }
+}

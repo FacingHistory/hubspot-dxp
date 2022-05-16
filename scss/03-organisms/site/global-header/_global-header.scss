@@ -1,0 +1,543 @@
+$header-xlarge: 1140px;
+$header-large: 1050px;
+$header-medium: 970px;
+$header-small: 480px;
+
+.header,
+.microsite-header {
+  .logo-link {
+    display: block;
+  }
+}
+
+.header__primary {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  .main-menu {
+    z-index: 4;
+  }
+
+  @media screen and (max-width: $main-menu-medium) {
+    background-color: $blue-light;
+    display: none;
+    opacity: 0.98;
+    overflow: hidden;
+    padding: 48px 28px 0 32px;
+
+    &.is-open {
+      display: block;
+      left: 0;
+      overflow-y: scroll;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      width: 100%;
+      z-index: $z-main-menu;
+    }
+  }
+
+  @media screen and (max-width: $main-menu-small) {
+    padding: 36px 28px 0 32px;
+  }
+}
+
+.header__right {
+  @media screen and (max-width: $header-medium) {
+    align-items: center;
+    display: flex;
+  }
+}
+
+.header__branding {
+  align-self: center;
+  flex-shrink: 0;
+  margin-right: 50px;
+  max-width: 300px;
+
+  @media screen and (max-width: $header-large) {
+    max-width: 165px;
+  }
+
+  @media screen and (max-width: $header-small) {
+    flex-shrink: 1;
+    margin-right: 10px;
+    max-width: 130px;
+  }
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 12px 30px 22px 40px;
+
+  @media screen and (max-width: 1300px) {
+    padding: 12px 18px 22px 16px;
+  }
+
+  @media screen and (max-width: $header-medium) {
+    padding: 16px 18px 16px 16px;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.header__left,
+.microsite-header__left {
+  align-items: flex-start;
+  display: flex;
+}
+
+.header__secondary {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 38px;
+
+  @media screen and (max-width: $header-medium) {
+    margin-bottom: 0;
+  }
+}
+
+.header__give {
+  background-color: $blue-light;
+  border-radius: 20px;
+  color: $black;
+  font-family: $font-primary;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 20px;
+  padding: 5px 16px 6px;
+
+  &:hover,
+  &:focus {
+    background-color: darken($blue-light, 10%);
+    color: $black;
+  }
+
+  @media screen and (max-width: $header-large) {
+    margin-right: 10px;
+  }
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__give--mobile {
+  @media screen and (max-width: $header-medium) {
+    background-color: $purple;
+    border-radius: 30px;
+    color: $white;
+    display: block;
+    font-size: 15px;
+    padding: 14px 32px;
+    margin-bottom: 56px;
+
+    &:hover,
+    &:focus {
+      background-color: $purple;
+      color: $white;
+    }
+  }
+}
+
+.header__utility {
+  align-items: center;
+  display: flex;
+}
+
+.header__unauthenticated {
+  display: flex;
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__unauthenticated--mobile {
+  @media screen and (max-width: $header-medium) {
+    display: flex;
+  }
+}
+
+.header__unauthenticated-link {
+  font-family: $font-primary;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.154;
+  display: flex;
+  padding: 5px 20px;
+  position: relative;
+
+  &:last-child {
+    padding-right: 0;
+
+    &:before {
+      background-color: $blue-lighter;
+      content: '';
+      height: 40px;
+      left: 0;
+      position: absolute;
+      top: -12px;
+      width: 1px;
+
+      @media screen and (max-width: $header-medium) {
+        background-color: rgba($blue, 0.5);
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media screen and (max-width: $header-medium) {
+    font-size: 17px;
+    letter-spacing: -0.25px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+.header__institutional-nav {
+  margin-right: 24px;
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__secondary-mobile {
+  background-color: $teal-medium;
+  display: none;
+  left: -32px;
+  padding: 16px 32px 70px;
+  position: relative;
+  width: 100vw;
+
+  @media screen and (max-width: $header-medium) {
+    display: block;
+  }
+}
+
+.header__institutional-nav--mobile {
+  margin-bottom: 20px;
+  margin-right: 0;
+
+  @media screen and (max-width: $header-medium) {
+    display: block;
+  }
+}
+
+.header__countries-wrapper {
+  display: flex;
+  position: relative;
+
+  @media screen and (max-width: $header-xlarge) {
+    display: none;
+  }
+}
+
+.header__down-arrow {
+  color: $blue-dark;
+  height: 7px;
+  pointer-events: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  z-index: $z-countries-dropdown-open;
+
+  .header__countries-wrapper.is-open & {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.header__countries-title {
+  cursor: pointer;
+  background-color: $gray-150;
+  border-radius: 15px;
+  border: 0;
+  font-family: $font-secondary;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  padding: 6px 28px 5px 15px;
+  position: relative;
+  width: 100%;
+  transition: background-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+  z-index: $z-countries-dropdown-open;
+
+  .header__countries-wrapper.is-open & {
+    background-color: $white;
+    box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.06),
+      -2px 0px 0px 0 rgba(0, 0, 0, 0.03);
+    border-radius: 13px 13px 0 0;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($gray-150, 3%);
+  }
+}
+
+.header__countries-list-wrapper {
+  background: $white;
+  border-radius: 0 5px 5px 5px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08), 0 0 2px 0 rgba(0, 0, 0, 0.06),
+    -2px 8px 28px 0 rgba(0, 0, 0, 0.16);
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  width: 215px;
+  z-index: $z-countries-dropdown;
+  visibility: hidden;
+  transition: visibility 0.1s ease 0.3s, height 0.3s ease;
+
+  .is-open & {
+    visibility: visible;
+    transition: visibility 0.1s, height 0.3s ease;
+  }
+}
+
+.header__countries-list {
+  list-style: none;
+  margin: 0;
+  padding: 21px 32px 32px 24px;
+}
+
+.header__countries-item-link {
+  text-decoration: none;
+  display: inline;
+  background-image: linear-gradient($blue, $blue);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.3s, background-position 0.3s;
+
+  &:hover,
+  &:focus {
+    background-position: 0 100%;
+    background-size: 100% 1px;
+  }
+}
+
+.header__countries-item-title {
+  background-image: linear-gradient($blue, $blue);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+.header__countries-item {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3333;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.header__search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  svg {
+    height: 22px;
+    width: 22px;
+    transition: transform 0.3s;
+  }
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__search-button--mobile {
+  display: none;
+
+  @media screen and (max-width: $header-medium) {
+    display: block;
+    margin-right: 18px;
+  }
+}
+
+.header__person-icon {
+  height: 26px;
+  margin-right: 6px;
+  width: 26px;
+
+  .toggle-expand--open & {
+    display: none;
+  }
+
+  @media screen and (max-width: $header-medium) {
+    height: 28px;
+    margin-right: 0;
+    width: 28px;
+  }
+}
+
+.header__account-close {
+  align-items: center;
+  display: none;
+  height: 28px;
+  justify-content: center;
+  width: 28px;
+
+  .toggle-expand--open & {
+    display: flex;
+  }
+}
+
+.header__authenticated {
+  padding-left: 20px;
+  /*position: relative;*/
+
+  &:before {
+    background-color: rgba($teal-dark, 0.2);
+    content: '';
+    left: 0;
+    position: absolute;
+    top: -12px;
+    height: 40px;
+    width: 1px;
+
+    @media screen and (max-width: $header-medium) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $header-medium) {
+    padding-left: 0;
+    margin-right: 18px;
+  }
+}
+
+.header__authenticated-trigger {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  margin-top: -3px;
+  padding: 0;
+  position: relative;
+  text-align: left;
+  transition: transform 0.3s;
+
+  @media screen and (max-width: $header-medium) {
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.header__authenticated-text {
+  margin-right: 6px;
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__authenticated-pre {
+  color: $gray-800;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.header__display-name {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.1538;
+}
+
+.header__dropdown {
+  height: 22px;
+  width: 22px;
+
+  @media screen and (max-width: $header-medium) {
+    display: none;
+  }
+}
+
+.header__dropdown-icon {
+  height: 8px;
+  width: 10px;
+}
+
+.header__workspace-navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  @media screen and (max-width: $main-menu-medium) {
+    background-color: $gray-150;
+    display: none;
+    /*overflow: hidden;
+    padding: 48px 28px 0 32px;*/
+
+    &.is-open {
+      display: block;
+      left: 0;
+      /*verflow-y: scroll;*/
+      position: absolute;
+      right: 0;
+      top: calc(100% - 3px);
+      width: 100%;
+      z-index: $z-main-menu;
+    }
+  }
+
+  /*@media screen and (max-width: $main-menu-small) {
+    padding: 36px 28px 0 32px;
+  }*/
+}
+
+.header__microsite-branding {
+  display: none;
+  align-self: center;
+  color: $blue-dark;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus {
+    color: darken($blue-dark, 6%);
+  }
+
+  @media screen and (max-width: $header-medium) {
+    display: block;
+  }
+}

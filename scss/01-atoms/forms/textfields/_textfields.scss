@@ -1,0 +1,53 @@
+.form-item {
+  color: clr(text);
+  margin-bottom: 1em;
+  max-width: 32em;
+
+  @include clearfix;
+
+  // Inline.
+  &.webform-element--title-inline {
+    display: flex;
+  }
+}
+
+.form-item__label {
+  display: block;
+  font-weight: 600;
+
+  @media screen and (min-width: $xs) {
+    display: block;
+    margin-right: 2%;
+    padding: 0.6em 0;
+  }
+}
+
+.form-item__textfield {
+  border: 1px solid $gray-175;
+  line-height: 1;
+  padding: 0.5em 0.6em;
+  max-width: 100%;
+
+  &:focus {
+    border-color: $gray-200;
+  }
+
+  &::placeholder {
+    color: $gray-200;
+  }
+}
+
+.form-item__description {
+  margin-top: 0.3em;
+}
+
+.form-fieldset {
+  border: none;
+  margin-bottom: 2em;
+  padding: 0;
+
+  .form-item {
+    margin-left: 1em;
+    max-width: 31em;
+  }
+}

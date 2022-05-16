@@ -1,0 +1,49 @@
+.social-menu {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0;
+
+  &__text {
+    font-weight: bold;
+  }
+}
+
+.social-menu__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.social-menu__link {
+  display: block;
+  transition: transform 0.3s, color 0.3s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+}
+
+.social-menu__icon {
+  fill: currentColor;
+  max-height: 24px;
+  max-width: 24px;
+}
+
+.social-menu--hero {
+  .social-menu__link {
+    color: $steel;
+  }
+
+  .social-menu__icon {
+    max-height: 22px;
+    max-width: 22px;
+  }
+
+  .social-menu__item {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+}

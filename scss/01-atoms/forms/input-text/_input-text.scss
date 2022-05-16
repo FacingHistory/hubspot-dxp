@@ -1,0 +1,16 @@
+.input-text {
+  border-radius: 3px;
+  border: 1px solid $blue;
+  height: 45px;
+  max-width: 120px;
+  padding: 0px 10px 0 24px;
+}
+
+.input-text::placeholder,
+.input-text {
+  color: $black;
+  font-family: $font-primary;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.412;
+}

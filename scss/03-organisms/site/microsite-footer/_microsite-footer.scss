@@ -1,0 +1,242 @@
+// Microsite Footer
+$microsite-footer-large: 1100px;
+$microsite-footer-medium: 980px;
+$microsite-footer-small: 450px;
+
+.microsite-footer__wrapper {
+  background: linear-gradient(0deg, $gray-150 100%, #ffffff 92%);
+  padding-top: 48px;
+}
+
+.microsite-footer__site-links-container {
+  color: $black;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 60px;
+
+  @media screen and (max-width: $microsite-footer-medium) {
+    display: block;
+  }
+}
+
+.microsite-footer__site-links-nav {
+  p {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+}
+
+.microsite-footer__branding-container {
+  flex-grow: 1;
+  max-width: 325px;
+  margin-right: 50px;
+
+  @media screen and (max-width: $microsite-footer-medium) {
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.microsite-footer__branding {
+  align-self: center;
+  color: $blue-dark;
+  display: block;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.microsite-footer__menu-list {
+  column-gap: 62px;
+  display: flex;
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 55px 0;
+  row-gap: 20px;
+  width: 100%;
+
+  @media screen and (max-width: $microsite-footer-large) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+
+  @media screen and (max-width: $microsite-footer-medium) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 660px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $microsite-footer-small) {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 40px;
+  }
+}
+
+.microsite-footer__menu-link {
+  display: block;
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.microsite-footer__menu-item {
+  display: block;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.microsite-footer__message-container {
+  line-height: 1.8462;
+}
+
+.microsite-footer__address-phone {
+  margin-bottom: 24px;
+}
+
+.microsite-footer__expand-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.6s;
+}
+
+.microsite-footer__logo-wrapper {
+  .is-open & {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @media screen and (max-width: $microsite-footer-small) {
+    display: none;
+  }
+}
+
+.microsite-footer__toggle {
+  color: $white;
+  font-size: 11px;
+}
+
+.microsite-footer__toggle-container {
+  color: $white;
+  min-height: 40px;
+  position: relative;
+}
+
+.microsite-footer__toggle-container-inner {
+  align-items: center;
+  background-color: $purple-dark;
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  padding: 1px 40px;
+  transition: height 0.3s, padding 0.3s, background-color 0.2s, margin-top 0.3s;
+
+  .is-open & {
+    background-color: #f6f7f7;
+    padding: 0 40px;
+
+    @media screen and (max-width: $microsite-footer-medium) {
+      padding: 0 20px;
+    }
+  }
+
+  @media screen and (max-width: $microsite-footer-medium) {
+    padding: 1px 20px;
+  }
+
+  @media screen and (max-width: $microsite-footer-small) {
+    justify-content: flex-end;
+  }
+}
+
+.microsite-footer__button {
+  align-items: center;
+  background-color: $purple-dark;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  display: flex;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  text-transform: none;
+
+  svg {
+    height: 26px;
+    margin-left: 6px;
+    width: 26px;
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.microsite-footer__button--expand {
+  .is-open & {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.microsite-footer__button--hide {
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 40px;
+  transition: transform 0.3s;
+  visibility: hidden;
+
+  .is-open & {
+    opacity: 1;
+    pointer-events: auto;
+    position: absolute;
+    transform: translateY(6px);
+    visibility: visible;
+  }
+
+  &:hover,
+  &:focus {
+    transform: translateY(0);
+  }
+
+  @media screen and (max-width: $microsite-footer-medium) {
+    right: 20px;
+  }
+}
+
+.microsite-footer__top {
+  .email-signup__container-wrapper {
+    margin-bottom: 100px;
+
+    @media screen and (max-width: $microsite-footer-medium) {
+      margin-bottom: 80px;
+    }
+  }
+
+  .email-signup__container {
+    margin-top: 0;
+  }
+}

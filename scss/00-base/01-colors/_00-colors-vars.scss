@@ -1,0 +1,57 @@
+// Color variables - it is better to use the colors in
+// components/00-base/01-colors/_01-colors-used.scss rather than
+// these colors directly.
+
+// Grayscale
+$white: #fff;
+$gray-150: #f6f7f7;
+$gray-160: #f1f2f2;
+$gray-175: #e4e5e7;
+$gray-200: #d2d6d7;
+$grey-275: #999999;
+$gray-300: #8c8c8c;
+$gray-325: #899294;
+$gray-350: #6c787a;
+$gray-400: #4c5a5d;
+$gray-800: #252525;
+$black: #000;
+
+$steel: #677375;
+
+// Brand
+$purple-dark: #2e1f52;
+$purple: #3c286b;
+$purple-light: #9d93b5;
+$purple-lighter: #cdc9da;
+$purple-lightest: #eae9ef;
+
+$blue-lightest: #e5f5f7;
+$blue-lighter: #bfe8ea;
+$blue-light: #4ee3da;
+$blue: #00a3b0;
+$blue-dark: #009da9;
+$blue-darkest: #007e87;
+
+$navy: #0a3b47;
+
+$teal-darker: #00909c;
+$teal-dark: #25a6ac;
+$teal: #4de3da;
+$teal-medium: #4ad6ce;
+
+$charteuse: #cedb28;
+
+$orange: #f56902;
+$orange-dark: #e86302;
+
+$brown: #6c3f28;
+$tan: #f9f8f6;
+
+$salmon: #efa07e;
+$salmon-light: #fde1cc;
+$salmon-lighter: #fdf1ec;
+
+$green: #0d535c;
+
+// Remapping
+$text: $black;

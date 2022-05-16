@@ -1,0 +1,64 @@
+// These styles only affect the colors "Usage" page in the component library
+.cl-colors {
+  padding: 1rem;
+}
+
+.cl-colors__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px -3px;
+  padding: 0 0 3em;
+}
+
+.cl-colors__item-wrapper {
+  list-style: none;
+  margin: 15px 3px;
+  text-align: center;
+}
+
+.cl-colors__item {
+  align-items: flex-end;
+  display: flex;
+  flex: 1 1 20%;
+  justify-content: center;
+  list-style: none;
+  min-height: 150px;
+  min-width: 150px;
+  padding: 1rem 2rem;
+  margin-bottom: 4px;
+  transition: all 0.4s;
+}
+
+.cl-colors__title {
+  color: $gray-400;
+  font-family: $font-secondary;
+}
+
+// Dynamically set swatch text color based on the lightness of the background color
+@function set-color($color, $text-primary: text, $text-secondary: muted) {
+  @if (lightness($color) > 50) {
+    @return clr($text-primary);
+  } @else {
+    @return clr($text-secondary);
+  }
+}
+
+// Style default color swatches
+@each $name, $color in $defaultColors {
+  .cl-colors__item--default {
+    &-#{$name} {
+      background-color: clr($name);
+      color: set-color($color);
+    }
+  }
+}
+
+// Style dark color swatches
+@each $name, $color in $darkColors {
+  .cl-colors__item--dark {
+    &-#{$name} {
+      background-color: clr($name);
+      color: set-color($color, muted, accent-high);
+    }
+  }
+}

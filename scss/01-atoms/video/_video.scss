@@ -1,0 +1,35 @@
+.video {
+  position: relative;
+}
+
+.media {
+  .video-js {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.video__video-content {
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .modal & {
+    position: relative;
+  }
+
+  .show-video &,
+  .video.is-open & {
+    display: block;
+
+    > div {
+      margin: auto;
+    }
+  }
+}
