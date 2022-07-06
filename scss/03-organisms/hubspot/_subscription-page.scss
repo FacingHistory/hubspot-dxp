@@ -3,8 +3,14 @@
     background-color: #F6F7F7;
   }
 
+  #main-content .systems-page {
+    max-width: 990px;
+  }
+
   .page-header {
     font-family: $font-primary;
+    font-size: 20px;
+    line-height: 1.75;
   }
 
   .page-header h2 {
@@ -13,5 +19,46 @@
     font-weight: 500;
     letter-spacing: -0.25px;
     line-height: 1.6667;
+  }
+
+  #content.email-prefs p.header {
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 1.75;
+  }
+
+  #content.email-prefs .subscribe-options p.header {
+    font-family: $font-secondary;
+    font-size: 17px;
+    line-height: 1.7657;
+  }
+
+  #content.email-prefs .subscribe-options label[for="globalunsub"] span {
+    font-family: $font-secondary;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.6667;
+  }
+
+  #content .item {
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04), 0 0 2px 0 rgba(0,0,0,0.06), -2px 6px 24px 0 rgba(0,0,0,0.06);
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 32px 80px 45px 40px;
+
+    .item-inner p {
+      font-family: $font-secondary;
+      font-size: 15px;
+      line-height: 1.6667;
+    }
+
+    .checkbox-row {
+      font-family: $font-primary;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 15px;
+    }
   }
 }

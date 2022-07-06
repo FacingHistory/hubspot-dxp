@@ -1302,14 +1302,47 @@ figure {
 
 .subscription-preferences #main-content {
   background-color: #F6F7F7; }
+.subscription-preferences #main-content .systems-page {
+  max-width: 990px; }
 .subscription-preferences .page-header {
-  font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif; }
+  font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.75; }
 .subscription-preferences .page-header h2 {
   color: #252525;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.25px;
   line-height: 1.6667; }
+.subscription-preferences #content.email-prefs p.header {
+  font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.75; }
+.subscription-preferences #content.email-prefs .subscribe-options p.header {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.7657; }
+.subscription-preferences #content.email-prefs .subscribe-options label[for="globalunsub"] span {
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6667; }
+.subscription-preferences #content .item {
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04), 0 0 2px 0 rgba(0, 0, 0, 0.06), -2px 6px 24px 0 rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding: 32px 80px 45px 40px; }
+  .subscription-preferences #content .item .item-inner p {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-size: 15px;
+    line-height: 1.6667; }
+  .subscription-preferences #content .item .checkbox-row {
+    font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 15px; }
 
 .header .logo-link,
 .microsite-header .logo-link {
