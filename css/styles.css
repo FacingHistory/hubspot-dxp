@@ -1,3 +1,4 @@
+@import url("https://cloud.typography.com/7959380/6269632/css/fonts.css");
 /*
  * General Variables
  * Note: colors should go into
@@ -1298,6 +1299,17 @@ figure {
   text-align: center; }
   .toggle-expand--open .toggle-expand__close {
     display: inline-block; }
+
+.subscription-preferences #main-content {
+  background-color: #F6F7F7; }
+.subscription-preferences .page-header {
+  font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif; }
+.subscription-preferences .page-header h2 {
+  color: #252525;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  line-height: 1.6667; }
 
 .header .logo-link,
 .microsite-header .logo-link {

@@ -1,3 +1,6 @@
+// Gotham font
+@import url('https://cloud.typography.com/7959380/6269632/css/fonts.css');
+
 // Components
 @import '00-base/00-defaults/_01-variables.scss';
 @import '00-base/00-defaults/_02-breakpoints.scss';
@@ -28,6 +31,7 @@
 @import '02-molecules/menus/main-menu/_02-main-menu-link';
 @import '02-molecules/menus/main-menu/_03-main-menu-toggle';
 
+@import '03-organisms/hubspot/subscription-page';
 @import '03-organisms/site/global-header/_global-header.scss';
 @import '03-organisms/site/site-footer/_site-footer.scss';
 
