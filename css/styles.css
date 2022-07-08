@@ -1361,46 +1361,106 @@ figure {
 .subscription-preferences #main-content {
   background-color: #F6F7F7; }
 .subscription-preferences #main-content .systems-page {
-  max-width: 990px; }
+  max-width: calc(1200px + 80px);
+  padding-bottom: 120px; }
 .subscription-preferences .page-header {
   font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 1.75; }
+  line-height: 1.75;
+  padding-left: 20px;
+  position: relative; }
 .subscription-preferences .page-header h2 {
   color: #252525;
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.25px;
   line-height: 1.6667; }
+.subscription-preferences .page-header::before {
+  background-color: #25a6ac;
+  content: '';
+  height: calc(100% + 100px + 10px);
+  left: -15px;
+  opacity: 0.25;
+  position: absolute;
+  width: 1px; }
+.subscription-preferences .page-header h1::after {
+  background-color: #25a6ac;
+  content: '';
+  height: 1px;
+  left: -500px;
+  opacity: 0.25;
+  position: absolute;
+  top: 160px;
+  width: calc(520px + 15vw); }
 .subscription-preferences #content.email-prefs p.header {
   font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 1.75; }
+  line-height: 1.75;
+  margin-bottom: 80px;
+  padding-left: 20px; }
 .subscription-preferences #content.email-prefs .subscribe-options p.header {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 17px;
-  line-height: 1.7657; }
+  line-height: 1.7657;
+  margin-bottom: 10px;
+  padding-left: 0; }
+.subscription-preferences #content.email-prefs .subscribe-options label[for="globalunsub"] {
+  margin-bottom: 65px; }
 .subscription-preferences #content.email-prefs .subscribe-options label[for="globalunsub"] span {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   font-size: 15px;
   font-weight: 700;
   line-height: 1.6667; }
+.subscription-preferences #content .subscribe-options {
+  margin-left: 10%; }
 .subscription-preferences #content .item {
   background: #FFFFFF;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04), 0 0 2px 0 rgba(0, 0, 0, 0.06), -2px 6px 24px 0 rgba(0, 0, 0, 0.06);
   border-radius: 4px;
   margin-bottom: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 32px 80px 45px 40px; }
   .subscription-preferences #content .item .item-inner p {
     font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
     font-size: 15px;
-    line-height: 1.6667; }
+    line-height: 1.6667;
+    padding-left: 50px; }
   .subscription-preferences #content .item .checkbox-row {
     font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 1.35;
     margin-bottom: 15px; }
+    .subscription-preferences #content .item .checkbox-row input[type="checkbox"]:before {
+      position: relative;
+      display: block;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #007E87;
+      content: "";
+      background: #FFFFFF;
+      top: -11px;
+      border-radius: 4px; }
+    .subscription-preferences #content .item .checkbox-row input[type="checkbox"]:after {
+      position: relative;
+      display: block;
+      left: 0px;
+      top: -43px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid #007E87;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 4px; }
+    .subscription-preferences #content .item .checkbox-row input[type="checkbox"]:checked:after {
+      background-image: url("https://443401.fs1.hubspotusercontent-na1.net/hubfs/443401/Email%20Subscription%20Preferences/checkbox-teal.svg"); }
+    .subscription-preferences #content .item .checkbox-row span.fakelabel span:first-of-type {
+      margin-left: 25px; }
+.subscription-preferences #submitbutton {
+  background-color: #4ee3da;
+  margin-left: 10%; }
 
 .header .logo-link,
 .microsite-header .logo-link {

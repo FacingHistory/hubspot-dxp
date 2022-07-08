@@ -8,6 +8,7 @@
     {% if page_meta.html_title || pageTitle %}<title>{{ page_meta.html_title || pageTitle }}</title>{% endif %}
     {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
     <meta name="description" content="{{ page_meta.meta_description }}">
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7959380/6269632/css/fonts.css" />
     {{ require_css(get_asset_url("../../css/main.css")) }}
     {# This is intended to be used if a template requires template specific style sheets #}
     {% if template_css %}
