@@ -130,8 +130,22 @@
         background-image:  url('https://443401.fs1.hubspotusercontent-na1.net/hubfs/443401/Email%20Subscription%20Preferences/checkbox-teal.svg');
       }
 
-      span.fakelabel span:first-of-type {
-        margin-left: 25px;
+      span.fakelabel span {
+        &:first-of-type {
+          margin-left: 25px;
+
+          @media screen and (max-width: 768px) {
+            display: flex;
+            margin-left: 50px;
+            margin-top: -30px;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          //display: inline-block;
+          //margin-left: 50px;
+          //margin-top: -40px;
+        }
+
       }
     }
   }
