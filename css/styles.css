@@ -1369,6 +1369,23 @@ figure {
   line-height: 1.75;
   padding-left: 20px;
   position: relative; }
+.subscription-preferences .page-header h1 {
+  font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1667;
+  margin-bottom: 26px;
+  margin-top: 0; }
+  @media screen and (max-width: 1200px) {
+    .subscription-preferences .page-header h1 {
+      font-size: 50px; } }
+  @media screen and (max-width: 650px) {
+    .subscription-preferences .page-header h1 {
+      font-size: 42px; } }
+  @media screen and (max-width: 480px) {
+    .subscription-preferences .page-header h1 {
+      font-size: 35px; } }
 .subscription-preferences .page-header h2 {
   color: #252525;
   font-size: 24px;
