@@ -44,6 +44,17 @@
     font-weight: 500;
     letter-spacing: -0.25px;
     line-height: 1.6667;
+
+    &:before {
+      background: url("https://443401.fs1.hubspotusercontent-na1.net/hubfs/443401/Email%20Subscription%20Preferences/email-icon.svg") no-repeat;
+      content: "";
+      display: block;
+      float: left;
+      height: 20px;
+      margin: 13px 15px 0 0;
+      position: relative;
+      width: 20px;
+    }
   }
 
   .page-header::before {
@@ -127,7 +138,7 @@
         display: block;
         width: 32px;
         height: 32px;
-        border: 1px solid #007E87;
+        border: 2px solid #BDDFE0;
         content: "";
         background: #FFFFFF;
         top: -11px;
@@ -141,7 +152,7 @@
         top: -43px;
         width: 32px;
         height: 32px;
-        border: 1px solid #007E87;
+        // border: 2px solid #bddfe0;
         content: "";
         background-repeat: no-repeat;
         background-position:center;
