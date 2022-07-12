@@ -1358,6 +1358,38 @@ figure {
   margin-left: 4px;
   top: 1px; }
 
+.social-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0; }
+  .social-menu__text {
+    font-weight: bold; }
+
+.social-menu__item:not(:last-child) {
+  margin-right: 15px; }
+
+.social-menu__link {
+  display: block;
+  transition: transform 0.3s, color 0.3s; }
+  .social-menu__link:hover, .social-menu__link:focus {
+    transform: scale(1.2); }
+
+.social-menu__icon {
+  fill: currentColor;
+  max-height: 24px;
+  max-width: 24px; }
+
+.social-menu--hero .social-menu__link {
+  color: #677375; }
+.social-menu--hero .social-menu__icon {
+  max-height: 22px;
+  max-width: 22px; }
+.social-menu--hero .social-menu__item:not(:last-child) {
+  margin-right: 22px; }
+
 .subscription-preferences #main-content {
   background-color: #F6F7F7; }
 .subscription-preferences #main-content .systems-page {
@@ -2065,7 +2097,8 @@ figure {
 
 .footer__legal-menu .inline-menu {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding-left: 0px; }
 
 .footer__legal-menu .inline-menu__item {
   padding: 0 10px 0 10px;
@@ -2107,7 +2140,8 @@ figure {
 
 .footer__social-menu .social-menu {
   margin: -9px;
-  align-items: center; }
+  align-items: center;
+  padding-left: 0px; }
 .footer__social-menu .social-menu__item {
   display: inline-block;
   flex-shrink: 0;

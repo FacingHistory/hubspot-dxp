@@ -216,6 +216,7 @@ $global-footer-xsmall: 725px;
 .footer__legal-menu .inline-menu {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 0px;
 }
 
 .footer__legal-menu .inline-menu__item {
@@ -268,6 +269,7 @@ $global-footer-xsmall: 725px;
   .social-menu {
     margin: -9px;
     align-items: center;
+    padding-left: 0px;
   }
 
   .social-menu__item {
