@@ -1,9 +1,9 @@
 {
-  "label": "Button DXP",
+  "label": "Button DXP Email",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "host_template_types": ["PAGE", "EMAIL"],
+  "host_template_types": ["EMAIL"],
   "icon": "../../images/module-icons/cta.svg",
   "js_assets": [],
   "other_assets": [],

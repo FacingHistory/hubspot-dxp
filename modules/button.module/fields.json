@@ -6,7 +6,18 @@
     "locked" : false,
     "type" : "color",
     "default" : {
-       "color" : "#ff0000",
+       "color" : "#00838e",
+       "opacity" : 100
+    }
+  },
+  {
+    "name" : "text_color",
+    "label" : "Text color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+       "color" : "#ffffff",
        "opacity" : 100
     }
   },

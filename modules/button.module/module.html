@@ -1,7 +1,7 @@
 {# Module styles #}
 
 {% require_css %}
-  <style>
+  <style id="hs-inline-css">
     {% scope_css %}
 
       {# Button wrapper #}
@@ -24,7 +24,6 @@
         {% endif %}
         {{ module.styles.text.font.css }}
         {{ module.styles.spacing.spacing.css }}
-        background-color: red;
       }
 
       .button:hover,
@@ -60,11 +59,25 @@
 
 {# Button #}
 
-<div class="button-wrapper">
-  <a style="background-color: {{ module.bg_color.color }};" class="button" href="{{ href }}"
+<div class="button-wrapper" style="
+        background-color: {{ module.bg_color.color }};
+        border-radius: 26px;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.3333;
+        padding: 14px 32px;
+        text-align: center !important;
+        text-decoration: none;" >
+  <a class="button" href="{{ href }}" style="
+        color: {{ module.text_color.color }};
+        text-decoration: none;"
   {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
   >
     {{ module.button_text }}
   </a>
 </div>
+
