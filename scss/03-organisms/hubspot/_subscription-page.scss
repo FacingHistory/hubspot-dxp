@@ -6,6 +6,11 @@
   #main-content .systems-page {
     max-width: calc(1200px + 80px);
     padding-bottom: 120px;
+    padding-top: 135px;
+
+    @media screen and (max-width: 480px){
+      padding-top: 70px;
+    }
   }
 
   .page-header {
@@ -14,6 +19,14 @@
     line-height: 1.75;
     padding-left: 20px;
     position: relative;
+
+    @media screen and (max-width: 480px){
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 371px){
+      font-size: 18px;
+    }
   }
 
   .page-header h1 {
@@ -22,7 +35,7 @@
     font-weight: 800;
     letter-spacing: -1px;
     line-height: 1.1667;
-    margin-bottom: 26px;
+    margin-bottom: 20px;
     margin-top: 0;
 
     @media screen and (max-width: 1200px) {
@@ -36,14 +49,20 @@
     @media screen and (max-width: 480px) {
       font-size: 35px;
     }
+
+    @media screen and (max-width: 371px) {
+      font-size: 28px;
+    }
   }
 
   .page-header h2 {
     color: #252525;
+    font-family: "Gotham A","Gotham B","Helvetica","Arial",sans-serif;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: -0.25px;
     line-height: 1.6667;
+    margin-bottom: 10px;
 
     &:before {
       background: url("https://443401.fs1.hubspotusercontent-na1.net/hubfs/443401/Email%20Subscription%20Preferences/email-icon.svg") no-repeat;
@@ -54,6 +73,14 @@
       margin: 13px 15px 0 0;
       position: relative;
       width: 20px;
+
+      @media screen and (max-width: 371px){
+        margin: 8px 10px 0 0;
+      }
+    }
+
+    @media screen and (max-width: 371px){
+      font-size: 18px;
     }
   }
 
@@ -75,8 +102,28 @@
     left: -500px;
     opacity: 0.25;
     position: absolute;
-    top: 160px;
-    width: calc(520px + 15vw);
+    top: 150px;
+    width: calc(600px + 15vw);
+
+    @media screen and (max-width: 1200px){
+      top: 140px;
+    }
+
+    @media screen and (max-width: 791px){
+      top: 200px;
+    }
+
+    @media screen and (max-width: 650px){
+      top: 180px;
+    }
+
+    @media screen and (max-width: 480px){
+      top: 160px;
+    }
+
+    @media screen and (max-width: 371px){
+      top: 130px;
+    }
   }
 
   #content.email-prefs p.header {
@@ -85,6 +132,14 @@
     line-height: 1.75;
     margin-bottom: 80px;
     padding-left: 20px;
+
+    @media screen and (max-width: 480px){
+      padding-left: 0;
+    }
+
+    @media screen and (max-width: 371px){
+      font-size: 18px;
+    }
   }
 
   #content.email-prefs .subscribe-options p.header {
@@ -96,7 +151,7 @@
   }
 
   #content.email-prefs .subscribe-options label[for="globalunsub"] {
-    margin-bottom: 65px;
+    margin-bottom: 80px;
   }
 
   #content.email-prefs .subscribe-options label[for="globalunsub"] span {
@@ -108,6 +163,58 @@
 
   #content .subscribe-options {
     margin-left: 10%;
+    margin-top: 80px;
+
+    input[type="checkbox"]:before{
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #BDDFE0;
+      content: "";
+      background: #FFFFFF;
+      top: -2px;
+      border-radius: 4px;
+
+      @media not all and (min-resolution:.001dpcm) { 
+        @supports (-webkit-appearance: none) {
+          top: -4px;
+        }
+   }
+    }
+
+    input[type="checkbox"]:after{
+      position: relative;
+      display: block;
+      left: 0px;
+      top: -24px;
+      width: 20px;
+      height: 20px;
+      // border: 2px solid #bddfe0;
+      content: "";
+      background-repeat: no-repeat;
+      background-position:center;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"]:checked:after{
+      background-image:  url('https://443401.fs1.hubspotusercontent-na1.net/hubfs/443401/Email%20Subscription%20Preferences/checkbox-teal.svg');
+      background-size: 20px 20px;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   #content .item {
@@ -118,6 +225,18 @@
     margin-left: 10%;
     margin-right: 10%;
     padding: 32px 80px 45px 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 20px;
+      padding-right: 30px;
+    }
 
     .item-inner p {
       font-family: $font-secondary;
@@ -173,18 +292,35 @@
             margin-top: -30px;
           }
         }
-        @media screen and (max-width: 768px) {
-          //display: inline-block;
-          //margin-left: 50px;
-          //margin-top: -40px;
-        }
-
       }
     }
   }
 
   #submitbutton {
     background-color: $blue-light;
+    border-radius: 30px;
     margin-left: 10%;
+    padding: 20px 40px;
+
+    &:hover,
+    &:focus {
+      background-color: darken($blue-light, 2%)
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-left: 5%;
+    }
+
+    @media screen and (max-width: 600px) {
+      margin-left: 0;
+    }
+  }
+
+  footer {
+    padding-bottom: 50px;
+
+    .footer__right:before {
+      height: calc(100% + 70px);
+    }
   }
 }
