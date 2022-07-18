@@ -1,11 +1,8 @@
 {
-  "label": "Pricing card",
-  "css_assets": [],
-  "external_js": [],
+  "label": "Pricing card DXP",
   "global": false,
-  "host_template_types": ["PAGE", "EMAIL"],
+  "host_template_types": ["PAGE"],
   "icon": "../../images/module-icons/table.svg",
-  "js_assets": [],
   "other_assets": [],
   "smart_type": "NOT_SMART",
   "tags": [],

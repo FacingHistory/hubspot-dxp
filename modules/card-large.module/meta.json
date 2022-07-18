@@ -1,7 +1,5 @@
 {
-  "label": "DXP - Email Card",
-  "css_assets": [],
-  "external_js": [],
+  "label": "DXP - Email Card Large",
   "global": false,
   "host_template_types": ["PAGE", "EMAIL"],
   "icon": "../../images/module-icons/info-circle-solid.svg",
