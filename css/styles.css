@@ -1403,6 +1403,7 @@ figure {
   font-family: "Gotham A", "Gotham B", "Helvetica", "Arial", sans-serif;
   font-size: 20px;
   line-height: 1.75;
+  max-width: 900px;
   padding-left: 20px;
   position: relative; }
   @media screen and (max-width: 480px) {
@@ -1617,7 +1618,7 @@ figure {
   margin-left: 10%;
   padding: 20px 40px; }
   .subscription-preferences #submitbutton:hover, .subscription-preferences #submitbutton:focus {
-    background-color: #45e2d8; }
+    background-color: #23dbd0; }
   @media screen and (max-width: 768px) {
     .subscription-preferences #submitbutton {
       margin-left: 5%; } }

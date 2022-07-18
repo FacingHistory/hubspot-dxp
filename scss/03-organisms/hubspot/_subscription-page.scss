@@ -17,6 +17,7 @@
     font-family: $font-primary;
     font-size: 20px;
     line-height: 1.75;
+    max-width: 900px;
     padding-left: 20px;
     position: relative;
 
@@ -304,7 +305,7 @@
 
     &:hover,
     &:focus {
-      background-color: darken($blue-light, 2%)
+      background-color: #23dbd0;
     }
 
     @media screen and (max-width: 768px) {
