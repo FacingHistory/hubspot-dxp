@@ -3,7 +3,7 @@
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "host_template_types": ["PAGE"],
+  "host_template_types": ["PAGE", "EMAIL"],
   "icon": "../../images/module-icons/table.svg",
   "js_assets": [],
   "other_assets": [],
