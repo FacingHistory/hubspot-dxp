@@ -51,6 +51,19 @@
          ]
       },
       {
+        "allow_new_line": false,
+        "default": "A clear and bold heading",
+        "display_width": null,
+        "id": "c6be9c54-b3c7-c0ac-7989-8342e434eba5",
+        "label": "Heading content",
+        "locked": false,
+        "name": "header",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+      },
+      {
         "label": "Content",
         "name": "text",
         "type": "richtext",
@@ -64,7 +77,7 @@
           "lists",
           "standard_emphasis"
         ],
-        "default": "<h2>This is a title</h2><p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
+        "default": "<p>Place the main content of your card here.</p>"
       }
     ],
     "default": [
@@ -73,7 +86,8 @@
           "loading": "lazy",
           "size_type" : "auto"
         },
-        "text": "<h2>This is a title</h2><p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
+        "header":"A Clear and Bold Heading",
+        "text": "<p>Place the main content of your card here.</p>"
       }
     ]
   }

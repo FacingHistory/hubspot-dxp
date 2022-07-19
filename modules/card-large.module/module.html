@@ -11,6 +11,11 @@
           {{ card.tophat_tag }}
         </div>
       {% endif %}
+      {% if card.header %}
+        <h2>
+        {{ card.header }}
+        </h2>
+      {% endif %}
       {% if card.text %}
         <div class="card__text">
           {{ card.text }}
