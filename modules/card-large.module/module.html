@@ -6,6 +6,11 @@
 
   {% for card in module.card %}
     <section class="cards__card card">
+      {% if card.tophat_tag %}
+        <div class="card__tophat-tag">
+          {{ card.tophat_tag }}
+        </div>
+      {% endif %}
       {% if card.text %}
         <div class="card__text">
           {{ card.text }}
