@@ -16,6 +16,16 @@
         {{ card.header }}
         </h2>
       {% endif %}
+      {% if card.event_start_date %}
+        <span>
+        {{ card.event_start_date }}
+        </span>
+      {% endif %}
+      {% if card.event_end_date %}
+        <span>
+         - {{ card.event_end_date }}
+        </span>
+      {% endif %}
       {% if card.text %}
         <div class="card__text">
           {{ card.text }}

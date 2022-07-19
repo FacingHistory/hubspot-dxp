@@ -52,7 +52,7 @@
       },
       {
         "allow_new_line": false,
-        "default": "A clear and bold heading",
+        "default": "A Clear and Bold Heading",
         "display_width": null,
         "id": "c6be9c54-b3c7-c0ac-7989-8342e434eba5",
         "label": "Heading content",
@@ -62,6 +62,24 @@
         "show_emoji_picker": false,
         "type": "text",
         "validation_regex": ""
+      },
+      {
+        "name" : "event_start_date",
+        "label" : "Event Start Date",
+        "required" : false,
+        "locked" : false,
+        "type" : "date",
+        "default" : null,
+        "inline_help_text": "For Professional Learning Events, enter the event start date."
+      },
+      {
+        "name" : "event_end_date",
+        "label" : "Event End Date",
+        "required" : false,
+        "locked" : false,
+        "type" : "date",
+        "default" : null,
+        "inline_help_text": "For Professional Learning Events, enter the event end date. If this is a one-day event, leave this field blank"
       },
       {
         "label": "Content",
