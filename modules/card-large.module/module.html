@@ -1,4 +1,8 @@
 {# Cards #}
+{% set articles = ["Impact Story","Insight", "Media Mention", "Message", "News", "Press Release", "Research & Reports"] %}
+{% set events = ["Professional Learning", "Community Event"] %}
+{% set resources = ["Activity", "Assessment", "Chapter", "Mini-Lesson", "Section", "Lesson", "Reading", "Teaching Strategy"] %}
+{% set tophat_color = "" %}
 
 <div class="cards">
 
@@ -7,9 +11,18 @@
   {% for card in module.card %}
     <section class="cards__card card">
       {% if card.tophat_tag %}
-        <div class="card__tophat-tag">
-          {{ card.tophat_tag }}
-        </div>
+        {% if card.tophat_tag is within articles %}
+          {% set tophat_color = "green" %}
+        {% endif %}
+        {% if card.tophat_tag is within resources %}
+          {% set tophat_color = "purple" %}
+        {% endif %}
+        {% if card.tophat_tag is within events %}
+          {% set tophat_color = "blue" %}
+        {% endif %}
+          <div style="background-color: {{ tophat_color }}; color: white;" class="card__tophat-tag">
+            {{ card.tophat_tag }}
+          </div>
       {% endif %}
       {% if card.header %}
         <h2>
@@ -18,18 +31,18 @@
       {% endif %}
       {% if card.event_start_date %}
         <span>
-        {{ card.event_start_date }}
+        {{ card.event_start_date|datetimeformat("%A, %B %e, %Y") }}
         </span>
       {% endif %}
       {% if card.event_end_date %}
         <span>
-         - {{ card.event_end_date }}
+         - {{ card.event_end_date|datetimeformat("%A, %B %e, %Y") }}
         </span>
       {% endif %}
       {% if card.text %}
-        <div class="card__text">
-          {{ card.text }}
-        </div>
+          <div class="card__text">
+            {{ card.text }}
+          </div>
       {% endif %}
       {% if card.image.src %}
         {# {% set sizeAttrs = 'width="{{ card.image.width }}" height="{{ card.image.height }}"' %}

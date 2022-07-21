@@ -33,21 +33,73 @@
         "type": "choice",
         "choices": [
           [
+            "Activity",
+            "Activity"
+           ],
+          [
+          "Assessment",
+          "Assessment"
+          ],
+          [
+          "Chapter",
+          "Chapter"
+          ],
+          [
+            "Community Event",
+            "Community Event"
+           ],
+           [
+            "Lesson",
+            "Lesson"
+           ],
+          [
+           "Mini-Lesson",
+           "Mini-Lesson"
+          ],
+          [
            "Reading",
            "Reading"
           ],
           [
-           "Teaching Strategy",
-           "Teaching Strategy"
-          ],
+            "Impact Story",
+            "Impact Story"
+           ],
           [
            "Insight",
            "Insight"
           ],
           [
+            "Media Mention",
+            "Media Mention"
+           ],
+           [
+            "Message",
+            "Message"
+           ],
+           [
+           "News",
+           "News"
+          ],
+          [
+          "Press Release",
+          "Press Release"
+          ],
+          [
            "Professional Learning",
            "Professional Learning"
-          ]
+          ],
+          [
+            "Research & Reports",
+            "Research & Reports"
+           ],
+          [
+           "Section",
+           "Section"
+          ],
+          [
+            "Teaching Strategy",
+            "Teaching Strategy"
+           ]
          ]
       },
       {
