@@ -9,7 +9,7 @@
   {# Loops through each card in the cards repeater #}
 
   {% for card in module.card %}
-    <section class="cards__card card">
+    <section style="background-color: white;" class="cards__card card">
       {% if card.tophat_tag %}
         {% if card.tophat_tag is within articles %}
           {% set tophat_color = "green" %}

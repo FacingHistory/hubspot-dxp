@@ -1,0 +1,18 @@
+[
+  {
+    "label": "DXP - Body Content",
+    "name": "text",
+    "type": "richtext",
+    "default": "Enter body text here.",
+    "enabled_features": [
+      "advanced_emphasis",
+      "alignment",
+      "block",
+      "emoji",
+      "font_family",
+      "font_size",
+      "lists",
+      "standard_emphasis"
+    ]
+  }
+]
