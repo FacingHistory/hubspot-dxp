@@ -55,7 +55,7 @@
     "type": "font",
     "id": "1e49af79-41c7-e609-c44d-443e4ac5893b",
     "default": {
-     "font": "tahoma, arial, helvetica, sans-serif",
+     "font": "Arial, Helvetica, sans-serif;",
      "fallback": null,
      "variant": null,
      "font_set": "DEFAULT",

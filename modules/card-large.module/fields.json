@@ -10,7 +10,7 @@
     },
     "children": [
       {
-        "label": "Image",
+        "label": "Image (optional)",
         "name": "image",
         "type": "image",
         "responsive": true,
@@ -22,7 +22,7 @@
       },
       {
         "name" : "tophat_tag",
-        "label" : "Tophat Tag",
+        "label" : "Tophat Tag (optional)",
         "required" : false,
         "locked" : false,
         "validation_regex" : "",
@@ -31,6 +31,7 @@
         "display" : "select",
         "placeholder": "Select a tag",
         "type": "choice",
+        "inline_help_text": "Select a tag that corresponds with this text. The tag will appear at the top of the card.",
         "choices": [
           [
             "Activity",
@@ -104,10 +105,10 @@
       },
       {
         "allow_new_line": false,
-        "default": "A Clear and Bold Heading",
+        "default": "Write A Clear and Bold Heading Here",
         "display_width": null,
         "id": "c6be9c54-b3c7-c0ac-7989-8342e434eba5",
-        "label": "Heading content",
+        "label": "Heading content (optional)",
         "locked": false,
         "name": "header",
         "required": false,
@@ -117,7 +118,7 @@
       },
       {
         "name" : "event_start_date",
-        "label" : "Event Start Date",
+        "label" : "Event Start Date (optional)",
         "required" : false,
         "locked" : false,
         "type" : "date",
@@ -126,7 +127,7 @@
       },
       {
         "name" : "event_end_date",
-        "label" : "Event End Date",
+        "label" : "Event End Date (optional)",
         "required" : false,
         "locked" : false,
         "type" : "date",
@@ -134,7 +135,16 @@
         "inline_help_text": "For Professional Learning Events, enter the event end date. If this is a one-day event, leave this field blank"
       },
       {
-        "label": "Content",
+        "name" : "registration_deadline",
+        "label" : "Registration Deadline (optional)",
+        "required" : false,
+        "locked" : false,
+        "type" : "date",
+        "default" : null,
+        "inline_help_text": "This date will appear within the phrase 'Register before [Date]!'"
+      },
+      {
+        "label": "Content (optional)",
         "name": "text",
         "type": "richtext",
         "enabled_features": [
@@ -148,6 +158,15 @@
           "standard_emphasis"
         ],
         "default": "<p>Place the main content of your card here.</p>"
+      },
+      {
+        "name" : "pd_hours",
+        "label" : "PD Hours (optional)",
+        "required" : false,
+        "locked" : false,
+        "type" : "text",
+        "default" : null,
+        "inline_help_text": "Enter the number of PD hours earned at this event."
       }
     ],
     "default": [

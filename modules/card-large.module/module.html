@@ -12,15 +12,15 @@
     <section style="background-color: white;" class="cards__card card">
       {% if card.tophat_tag %}
         {% if card.tophat_tag is within articles %}
-          {% set tophat_color = "green" %}
+          {% set tophat_color = "#cce6d5" %}
         {% endif %}
         {% if card.tophat_tag is within resources %}
-          {% set tophat_color = "purple" %}
+          {% set tophat_color = "#c9a3c0" %}
         {% endif %}
         {% if card.tophat_tag is within events %}
-          {% set tophat_color = "blue" %}
+          {% set tophat_color = "#97ace8" %}
         {% endif %}
-          <div style="background-color: {{ tophat_color }}; color: white;" class="card__tophat-tag">
+          <div style="background-color: {{ tophat_color }}; color: '#000000'; padding: 2px; width: fit-content;" class="card__tophat-tag">
             {{ card.tophat_tag }}
           </div>
       {% endif %}
@@ -39,6 +39,23 @@
          - {{ card.event_end_date|datetimeformat("%A, %B %e, %Y") }}
         </span>
       {% endif %}
+      {% if card.registration_deadline %}
+        {% set day = card.registration_deadline.strftime('%e') %}
+          {% if day >= 4 and day <= 20 %}
+              {% set day = day + "th" %}
+          {% elif day >= 24 and day <= 30 %}
+              {% set day = day + "th" %}
+          {% elif day == 1 or day == 21 or day == 31 %}
+              {% set day = day + "st" %}
+          {% elif day == 2 or day == 22 %}
+              {% set day = day + "nd" %}
+          {% elif day == 3 or day == 23 %}
+              {% set day = day + "rd" %}
+          {% endif %}
+        <div>
+         Register before {{ card.registration_deadline|datetimeformat("%A, %B") }} {{ day }}!
+        </div>
+      {% endif %}
       {% if card.text %}
           <div class="card__text">
             {{ card.text }}
@@ -54,7 +71,11 @@
          {# {% set loadingAttr = card.image.loading != "disabled" ? 'loading="{{ card.image.loading }}"' : "" %} #}
         <img class="card__image" style="max-width: 100%; height: auto;" src="{{ card.image.src }}" alt="{{ card.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
       {% endif %}
+      {% if card.pd_hours %}
+          <div class="card__pd-hours">
+            {{ card.pd_hours }} PD Hours Upon Completion
+          </div>
+      {% endif %}
     </section>
   {% endfor %}
-
 </div>
