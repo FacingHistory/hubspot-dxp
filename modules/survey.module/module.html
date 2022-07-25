@@ -1,0 +1,31 @@
+<div class="surveys">
+  {# Loops through each survey in the surveys repeater #}
+  {% for survey in module.survey %}
+    <section style="background-color: white;" class="surveys__survey survey">
+      {% if survey.image.src %}
+        {# TO DO: add icon to fields.json #}
+        <img class="survey__icon" style="max-width: 100%; height: auto;" src="{{ survey.image.src }}" alt="{{ survey.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+      {% endif %}
+      {% if survey.header_provocation %}
+        <h2>
+        {{ survey.header_provocation }}
+        </h2>
+      {% endif %}
+      {% if survey.header_question %}
+        <h2>
+        {{ survey.header_question }}
+        </h2>
+      {% endif %}
+      {% if survey.cta_1 %}
+          <span class="survey__cta">
+            {% cta guid={{ survey.cta_1 }} %}
+          </span>
+      {% endif %}
+      {% if survey.cta_2 %}
+          <span class="survey__cta">
+            {% cta guid={{ survey.cta_2 }} %}
+          </span>
+      {% endif %}
+    </section>
+  {% endfor %}
+</div>

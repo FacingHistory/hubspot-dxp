@@ -1,0 +1,61 @@
+[
+  {
+    "label": "Survey",
+    "name": "survey",
+    "type": "group",
+    "occurrence": {
+      "default": 1,
+      "min": 1,
+      "sorting_label_field": "survey.title"
+    },
+    "children": [
+      {
+        "allow_new_line": false,
+        "default": "Be Heard!",
+        "display_width": null,
+        "id": "c6be9c54-b3c7-c0ac-7989-8342e434eba5",
+        "label": "Heading - Provocation",
+        "locked": false,
+        "name": "header_provocation",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+      },
+      {
+        "allow_new_line": false,
+        "default": "What is your survey question (Type it here)?",
+        "display_width": null,
+        "label": "Heading - Survey Question",
+        "locked": false,
+        "name": "header_question",
+        "required": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "validation_regex": ""
+      },
+      {
+        "name" : "cta_1",
+        "label" : "Survey Option 1 (CTA)",
+        "required" : false,
+        "locked" : false,
+        "type" : "cta",
+        "default" : null
+      },
+      {
+        "name" : "cta_2",
+        "label" : "Option 2 (CTA)",
+        "required" : false,
+        "locked" : false,
+        "type" : "cta",
+        "default" : null
+      }
+    ],
+    "default": [
+      {
+        "header_provocation":"Be Heard!",
+        "header_question": "What is your survey question (Type it here)?"
+      }
+    ]
+  }
+]
